@@ -41,16 +41,15 @@ curl -O https://raw.githubusercontent.com/josephhany/Distributed-Benchmarking/ma
 git clone https://github.com/root-project/root.git root_src
 
 chmod u+x launch_build.sh
-
 ```
 
 **(3) Install Miniconda and Mamba**
 
-```wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh && chmod +x Miniconda*.sh && ./Miniconda*.sh (remember to install it where the project is see next slide) && echo ```
+```
+wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh && chmod +x Miniconda*.sh && ./Miniconda*.sh (remember to install it where the project is see next slide) && echo 'export PATH="$PATH:$CONDA_PREFIX/bin"' >> ~/.bashrc && source ~/.bashrc
 
-```'export PATH="$PATH:$CONDA_PREFIX/bin"' >> ~/.bashrc && source ~/.bashrc```
-
-```conda install -n base -c conda-forge mamba```
+conda install -n base -c conda-forge mamba
+```
 
 **(4) Create and activate a new environment with the required libraries**
 
