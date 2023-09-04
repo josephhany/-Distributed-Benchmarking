@@ -27,7 +27,7 @@ srun -p photon --time=1:00:0 -N 1 -c 32 --tasks-per-node=1 --pty bash -i
 
 `-p` is the queue name which is `dc-cpu` for `JURECA` and `photon` for `hpc-batch`
 
-`-A` is the account name which is `slfse` for `JURECA` and `boulis1` for `hpc-batch`
+`-A` is the budget account which is `slfse` for `JURECA` and none for `hpc-batch`
 
 `--time` is wall-clock time. The less it is the faster the allocation. In the above command, we specify it to be 1 hour `1:00:00`
 
