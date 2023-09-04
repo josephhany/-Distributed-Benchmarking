@@ -1,6 +1,8 @@
 
 **To install ROOT Distributedly:**
 
+**Note:** Replace jboulis and boulis1 in the following commands with your username for lxplus, hpc-batch, juelich
+
 (1) Access the desired cluster
 
 ```
