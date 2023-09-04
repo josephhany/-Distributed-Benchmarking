@@ -3,10 +3,23 @@
 
 In order to install ROOT, you will need to have access to the internet to download some necessary packages. However, in most HPCs, the only nodes that have access to the internet are the login nodes. Thus, we are going to install ROOT on the shared storage system from the login nodes. However, the following installation will not work if the login nodes have different operating system or architecture than the worker nodes. In this case, please follow the instructions in section ().
 
-To check whether the login node has the same architecture and operating system as the worker nodes, execute the following command on a login node:
+To check whether the login node has the same architecture and operating system as the worker nodes, execute the following command on a login node and worker node and compare the OS and Arch:
 
 ```
 cat /etc/os-release
+
+uname -m
+```
+
+To access a worker node, execute the following command:
+
+```
+srun -p dc-cpu -A slfse --time=24:00:0 -N 1 -c 64 --tasks-per-node=1 --pty bash -i
+# Queue name : dc-cpu
+# Account name : slfse
+# wall-clock time: 24:00:00
+# Number of nodes: 1
+# Number of cores per nodes: 64
 ```
 
 **Note:** Replace jboulis and boulis1 in the following commands with your username for lxplus, hpc-batch, juelich
