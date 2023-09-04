@@ -54,11 +54,13 @@ conda install -n base -c conda-forge mamba
 **(4) Create and activate a new environment with the required libraries**
 
 ```
+
 mamba create -n rootdev numpy pytest dask distributed dask-jobqueue matplotlib screen ninja
 
 srun -p photon --time=24:00:0 -N 1 -c 32 --tasks-per-node=1 --pty bash -i
 
 conda activate rootdev
+
 ```
 
 **(5) Start the installation of ROOT on a separate Screen**
