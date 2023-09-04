@@ -177,7 +177,7 @@ find /p/project/ -maxdepth 1 -type d -exec test -r {} \; -print | awk -F/ '!/\/\
 # Getting Data into Julich
 
 
-# Some useful PromQL queries to query Prometheus time-series database
+# PromQL queries to query Prometheus time-series database
 
 This query calculates the per-second rate of change (instantaneous rate) in the "node_network_receive_bytes_total" metric over a 30-second window
 ```
