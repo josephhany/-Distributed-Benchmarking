@@ -79,3 +79,15 @@ Ctrl + A + D
 
 screen -r experiment1
 ```
+
+**To install Prometheus:**
+```
+wget https://github.com/prometheus/prometheus/releases/download/v2.46.0/prometheus-2.46.0.linux-amd64.tar.gz
+tar -xvf prometheus-2.46.0.linux-amd64.tar.gz
+
+mv prometheus-2.46.0.linux-amd64/ prometheus/
+
+cd prometheus/
+
+./prometheus --config.file=prometheus.yml
+```
