@@ -87,14 +87,15 @@ chmod u+x launch_build.sh
 
 (3) Install Mamba (ref)[https://root-forum.cern.ch/t/root-build-with-python-3-7-in-centos7/53162/7?u=vpadulan]
 
+The bash script will install mamba into a folder of your choice. For simplicity, in the following, I suppose you installed it in a folder called `mambaforge` in the same directory where you ran the bash script.
+
 ```
 cd /p/project/cslfse/$(whoami)
+
 curl -L -O "https://github.com/conda-forge/miniforge/releases/latest/download/Mambaforge-$(uname)-$(uname -m).sh"
+
 bash Mambaforge-$(uname)-$(uname -m).sh
-# The bash script will install mamba into a folder of your choice
-# For simplicity, in the following I suppose you installed it
-# in a folder called `mambaforge` in the same directory where you
-# ran the bash script.
+
 source mambaforge/bin/activate
 ```
 
