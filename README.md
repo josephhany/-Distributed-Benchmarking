@@ -13,14 +13,26 @@ uname -m
 
 To access a worker node, execute the following command:
 
+For JURECA:
 ```
 srun -p dc-cpu -A slfse --time=1:00:0 -N 1 -c 64 --tasks-per-node=1 --pty bash -i
 ```
+
+For hpc-batch:
+```
+srun -p photon --time=1:00:0 -N 1 -c 32 --tasks-per-node=1 --pty bash -i
+```
+
 **Usage:**
+
 `-p` is the queue name which is `dc-cpu` for `JURECA` and `photon` for `hpc-batch`
+
 `-A` is the account name which is `slfse` for `JURECA` and `boulis1` for `hpc-batch`
+
 `--time` is wall-clock time. The less it is the faster the allocation. In the above command, we specify it to be 1 hour `1:00:00`
+
 `-N` is the Number of nodes allocated which is 1 in the above commands
+
 `-c` is the Number of cores per node which is `64` for JURECA and `32` for `hpc-batch`
 
 
