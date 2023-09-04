@@ -199,8 +199,6 @@ def main():
     ntests = args.ntests # 3
 
     dataset = createDataset(nfiles)
-    #files = [ os.path.join('root://eospublic.cern.ch//eos/opendata/cms/derived-data/AOD2NanoAODOutreachTool/', data_file) for data_file in dataset ]
-
     files = [ os.path.join(LOCAL_DIRECTORY, data_file) for data_file in dataset ]
 
     for _ in range(ntests):
