@@ -85,21 +85,32 @@ git clone https://github.com/root-project/root.git root_src
 chmod u+x launch_build.sh
 ```
 
-(3) Install Miniconda and Mamba
+(3) Install Mamba (ref)[https://root-forum.cern.ch/t/root-build-with-python-3-7-in-centos7/53162/7?u=vpadulan]
 
 ```
-wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh && chmod +x Miniconda*.sh && ./Miniconda*.sh (remember to install it where the project is see next slide) && echo 'export PATH="$PATH:$CONDA_PREFIX/bin"' >> ~/.bashrc && source ~/.bashrc
-
-conda install -n base -c conda-forge mamba
+cd /p/project/cslfse/$(whoami)
+curl -L -O "https://github.com/conda-forge/miniforge/releases/latest/download/Mambaforge-$(uname)-$(uname -m).sh"
+bash Mambaforge-$(uname)-$(uname -m).sh
+# The bash script will install mamba into a folder of your choice
+# For simplicity, in the following I suppose you installed it
+# in a folder called `mambaforge` in the same directory where you
+# ran the bash script.
+source mambaforge/bin/activate
 ```
 
 (4) Create and activate a new environment with the required libraries
 
 ```
 mamba create -n rootdev numpy pytest dask distributed dask-jobqueue matplotlib screen ninja
+```
 
+# In case of having Arch or OS mismatch between login nodes and worker nodes
+
+```
 srun -p photon --time=24:00:0 -N 1 -c 32 --tasks-per-node=1 --pty bash -i
+```
 
+```
 conda activate rootdev
 ```
 
