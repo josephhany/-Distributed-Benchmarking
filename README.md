@@ -1,12 +1,18 @@
 
 To install ROOT Distributedly:
 
-```
-ssh -XY jboulis@lxplus.cern.ch
-ssh -XY jboulis@hpc-batch.cern.ch
+`ssh -XY jboulis@lxplus.cern.ch` (if you are outside CERN network)
+
+**To access CERN hpc-batch cluster:**
+`ssh -XY jboulis@hpc-batch.cern.ch`
+
 OR
-ssh -i ~/.ssh/id_ed25519 boulis1@judac.fz-juelich.de 
-ssh -i ~/.ssh/id_ed25519 boulis1@jureca-ipv4.fz-juelich.de
+
+**To access JURECA in jülich:**
+`ssh -i ~/.ssh/id_ed25519 boulis1@judac.fz-juelich.de` (to any login node without IPv4)
+`ssh -i ~/.ssh/id_ed25519 boulis1@jureca-ipv4.fz-juelich.de` (to any login node with IPv4)
+`ssh -i ~/.ssh/id_ed25519 username@jurecaXX.fz-juelich.de` (to access a specific login node without IPv4)
+`ssh -4 -i ~/.ssh/id_ed25519 username@jurecaXX.fz-juelich.de` (to access a specific login node with IPv4)
 
 mkdir rootproject_s && cd rootproject_s/
 curl -O https://raw.githubusercontent.com/josephhany/Distributed-Benchmarking/main/launch_build.py
