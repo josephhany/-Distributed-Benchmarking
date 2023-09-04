@@ -70,7 +70,7 @@ Now, you should be logged in the desired HPC
 
 Execute this command if you are using JURECA,
 ```
-mkdir /p/project/cslfse/$(whoami) && cd /p/project/cslfse/$(whoami)
+cd /p/home/jusers/$(whoami)
 ```
 
 ```
@@ -128,6 +128,12 @@ screen -r experiment1
 ```
 
 # Install Prometheus and Exporters
+
+**If you're using JURECA, execute the following command before starting installation:**
+
+```
+mkdir /p/project/cslfse/$(whoami) && cd /p/project/cslfse/$(whoami)
+```
 
 **To install Prometheus:**
 ```
