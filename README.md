@@ -33,6 +33,11 @@ Now, you should be inside the desired HPC
 
 (2) Download the installation scripts and setup the configuration
 
+Execute this command if you are using JURECA,
+```
+mkdir /p/project/cslfse/$(whoami) && cd /p/project/cslfse/$(whoami)
+```
+
 ```
 mkdir rootproject && cd rootproject/
 
