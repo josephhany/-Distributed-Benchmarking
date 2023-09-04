@@ -13,13 +13,15 @@ OR
 
 **To access JURECA in jülich:**
 
-```ssh -i ~/.ssh/id_ed25519 boulis1@judac.fz-juelich.de``` (to any login node without IPv4)
+```
+ssh -i ~/.ssh/id_ed25519 boulis1@judac.fz-juelich.de # to any login node without IPv4
 
-```ssh -i ~/.ssh/id_ed25519 boulis1@jureca-ipv4.fz-juelich.de``` (to any login node with IPv4)
+ssh -i ~/.ssh/id_ed25519 boulis1@jureca-ipv4.fz-juelich.de # to any login node with IPv4
 
-```ssh -i ~/.ssh/id_ed25519 username@jurecaXX.fz-juelich.de``` (to access a specific login node without IPv4)
+ssh -i ~/.ssh/id_ed25519 username@jurecaXX.fz-juelich.de # to access a specific login node without IPv4
 
-```ssh -4 -i ~/.ssh/id_ed25519 username@jurecaXX.fz-juelich.de``` (to access a specific login node with IPv4)
+ssh -4 -i ~/.ssh/id_ed25519 username@jurecaXX.fz-juelich.de # to access a specific login node with IPv4
+```
 
 **Now, you should be inside the desired HPC**
 
