@@ -22,7 +22,7 @@ srun -p dc-cpu -A slfse --time=24:00:0 -N 1 -c 64 --tasks-per-node=1 --pty bash 
 # Number of cores per nodes: 64
 ```
 
-**Note:** Replace jboulis and boulis1 in the following commands with your username for lxplus, hpc-batch, juelich
+**Note:** Replace `jboulis` and `boulis1` in the following commands with your username for lxplus, hpc-batch, juelich
 
 (1) Access the desired cluster
 
