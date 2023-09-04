@@ -31,15 +31,18 @@ ssh -4 -i ~/.ssh/id_ed25519 username@jurecaXX.fz-juelich.de # to access a specif
 
 **(2) Download the installation scripts and setup the configuration**
 
-```mkdir rootproject && cd rootproject/```
+```
+mkdir rootproject && cd rootproject/
 
-```curl -O https://raw.githubusercontent.com/josephhany/Distributed-Benchmarking/main/Install-ROOT/launch_build.py```
+curl -O https://raw.githubusercontent.com/josephhany/Distributed-Benchmarking/main/Install-ROOT/launch_build.py
 
-```curl -O https://raw.githubusercontent.com/josephhany/Distributed-Benchmarking/main/Install-ROOT/launch_build.sh```
+curl -O https://raw.githubusercontent.com/josephhany/Distributed-Benchmarking/main/Install-ROOT/launch_build.sh
 
-```git clone https://github.com/root-project/root.git root_src```
+git clone https://github.com/root-project/root.git root_src
 
-```chmod u+x launch_build.sh```
+chmod u+x launch_build.sh
+
+```
 
 **(3) Install Miniconda and Mamba**
 
