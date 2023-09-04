@@ -153,8 +153,6 @@ cd prometheus/
 **To install Slurm Exporter**
 (link)[]
 
-# Running Benchmarks
-
 # Modifying environment variables
 
 Environment Variable to disable caching
@@ -187,6 +185,23 @@ find /p/project/ -maxdepth 1 -type d -exec test -r {} \; -print | awk -F/ '!/\/\
 
 # Getting Data into Julich
 
+
+# Running Benchmarks
+
+Now, after you have installed ROOT, prometheus, node exporter, dask, and slurm exporter. You can run any benchmark by submitting it as job from any login node.
+
+First, you need to make sure that you modify these variables in +++ file based on your HPC and environment.
+
+```
+QUEUE_NAME = 'dc-cpu' # queue name
+LOGS_DIR = "logs" # 
+DaskDashboardPort = 1243
+LOCAL_DIRECTORY = '/tmp'
+PROMETHEUS_CONFIG_PATH = '/p/project/cslfse/boulis1/prometheus/prometheus.yml'
+CREATE_SCREEN_COMMAND = "/p/project/cslfse/boulis1/run_screen_script.sh"
+EXEC_SCRIPT_PATH = '/p/project/cslfse/boulis1/exec_df102.sh'
+ACOUNT_NAME = 'slfse'
+```
 
 # PromQL queries to query Prometheus time-series database
 
