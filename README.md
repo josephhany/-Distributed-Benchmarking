@@ -64,7 +64,7 @@ ssh -i ~/.ssh/id_ed25519 username@jurecaXX.fz-juelich.de # to access a specific 
 ssh -4 -i ~/.ssh/id_ed25519 username@jurecaXX.fz-juelich.de # to access a specific login node with IPv4
 ```
 
-Now, you should be inside the desired HPC
+Now, you should be logged in the desired HPC
 
 (2) Download the installation scripts and setup the configuration
 
