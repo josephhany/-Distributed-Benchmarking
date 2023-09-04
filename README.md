@@ -152,3 +152,19 @@ cd prometheus/
 
 **To install Slurm Exporter**
 (link)[]
+
+# Running Benchmarks
+
+# Modifying environment variables
+
+Environment Variable to disable caching
+
+```
+echo 'export EXTRA_CLING_ARGS="-O2"' >> ~/.bashrc
+```
+
+**Source .bashrc to **
+
+```
+source ~/.bashrc
+```
