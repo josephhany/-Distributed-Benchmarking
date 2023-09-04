@@ -126,6 +126,8 @@ Ctrl + A + D
 screen -r experiment1
 ```
 
+# Install Prometheus and Exporters
+
 **To install Prometheus:**
 ```
 wget https://github.com/prometheus/prometheus/releases/download/v2.46.0/prometheus-2.46.0.linux-amd64.tar.gz
@@ -137,3 +139,9 @@ cd prometheus/
 
 ./prometheus --config.file=prometheus.yml
 ```
+
+**To install Node Exporter**
+(link)[https://prometheus.io/docs/guides/node-exporter/]
+
+**To install Slurm Exporter**
+(link)[]
