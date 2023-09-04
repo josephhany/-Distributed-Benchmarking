@@ -168,3 +168,8 @@ echo 'export EXTRA_CLING_ARGS="-O2"' >> ~/.bashrc
 ```
 source ~/.bashrc
 ```
+
+To find project name in JURECA, either get it from JuDoor portal or execute this commands:
+```
+find /p/project/ -maxdepth 1 -type d -exec test -r {} \; -print | awk -F/ '!/\/\./ && !/\/(test|ddn-ime|project$)/ {print $NF}'
+```
