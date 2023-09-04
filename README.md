@@ -173,3 +173,18 @@ To find project name in JURECA, either get it from JuDoor portal or execute this
 ```
 find /p/project/ -maxdepth 1 -type d -exec test -r {} \; -print | awk -F/ '!/\/\./ && !/\/(test|ddn-ime|project$)/ {print $NF}'
 ```
+
+# Getting Data into Julich
+
+
+# Some useful PromQL queries to query Prometheus time-series database
+
+This query calculates the per-second rate of change (instantaneous rate) in the "node_network_receive_bytes_total" metric over a 30-second window
+```
+irate(node_network_receive_bytes_total[30s])
+```
+
+This query calculates the rate of change of the process_cpu_seconds_total metric over a 30-second time window and then multiplies the result by 100 to get CPU utilization in percentage
+```
+rate(process_cpu_seconds_total[30s]) * 100
+```
