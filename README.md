@@ -169,6 +169,17 @@ echo 'export EXTRA_CLING_ARGS="-O2"' >> ~/.bashrc
 source ~/.bashrc
 ```
 
+# To enable/disable AsyncPrefetching
+
+```
+vim $ROOTSYS/etc/system.rootrc
+```
+Search for `TFile.AsyncPrefetching` and make it `yes` to enable AsyncPrefetching or `no` to disable it.
+
+[link](https://root-forum.cern.ch/t/enable-async-prefetching-per-file-per-tree/25504)
+
+vim $ROOTSYS/etc/system.rootrc
+
 To find project name in JURECA, either get it from JuDoor portal or execute this commands:
 ```
 find /p/project/ -maxdepth 1 -type d -exec test -r {} \; -print | awk -F/ '!/\/\./ && !/\/(test|ddn-ime|project$)/ {print $NF}'
