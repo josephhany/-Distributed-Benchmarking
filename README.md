@@ -2,7 +2,12 @@
 To install ROOT Distributedly:
 
 ```
-ssh -XY jboulis@hpc-batch.cern.ch …….. ssh -i ~/.ssh/id_ed25519 boulis1@judac.fz-juelich.de … ssh -i ~/.ssh/id_ed25519 boulis1@jureca-ipv4.fz-juelich.de
+ssh -XY jboulis@lxplus.cern.ch
+ssh -XY jboulis@hpc-batch.cern.ch
+OR
+ssh -i ~/.ssh/id_ed25519 boulis1@judac.fz-juelich.de 
+ssh -i ~/.ssh/id_ed25519 boulis1@jureca-ipv4.fz-juelich.de
+
 mkdir rootproject_s && cd rootproject_s/
 curl -O https://raw.githubusercontent.com/josephhany/Distributed-Benchmarking/main/launch_build.py
 curl -O https://raw.githubusercontent.com/josephhany/Distributed-Benchmarking/main/launch_build.sh
