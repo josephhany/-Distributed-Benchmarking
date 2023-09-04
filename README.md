@@ -27,13 +27,11 @@ OR
 
 ```mkdir rootproject && cd rootproject/```
 
-```curl -O https://raw.githubusercontent.com/josephhany/Distributed-Benchmarking/main/launch_build.py```
+```curl -O https://raw.githubusercontent.com/josephhany/Distributed-Benchmarking/main/Install-ROOT/launch_build.py```
 
-```curl -O https://raw.githubusercontent.com/josephhany/Distributed-Benchmarking/main/launch_build.sh```
+```curl -O https://raw.githubusercontent.com/josephhany/Distributed-Benchmarking/main/Install-ROOT/launch_build.sh```
 
 ```git clone https://github.com/root-project/root.git root_src```
-
-```git clone https://github.com/siliataider/root.git root_src```
 
 ```chmod u+x launch_build.sh```
 
