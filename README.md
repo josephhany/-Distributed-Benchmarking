@@ -1,7 +1,7 @@
 
 **To install ROOT Distributedly:**
 
-In order to install ROOT, you will need to have access to the internet to download some necessary packages. However, in most HPCs, the only nodes that have access to the internet are the login nodes. Thus, we are going to install ROOT on the shared storage system from the login nodes. However, the following installation will not work if the login nodes have different operating system or architecture than the worker nodes. In this case, please follow the instructions in section ().
+In order to install ROOT, you will need to have access to the internet to download some necessary packages. However, in most HPCs, the only nodes that have access to the internet are the login nodes. Thus, we are going to install ROOT on the shared storage system from the login nodes. However, the following installation will not work if the login nodes have a different operating system or architecture than the worker nodes. In this case, please follow the instructions in section ().
 
 To check whether the login node has the same architecture and operating system as the worker nodes, execute the following command on a login node and worker node and compare the OS and Arch:
 
@@ -14,13 +14,15 @@ uname -m
 To access a worker node, execute the following command:
 
 ```
-srun -p dc-cpu -A slfse --time=24:00:0 -N 1 -c 64 --tasks-per-node=1 --pty bash -i
-# Queue name : dc-cpu
-# Account name : slfse
-# wall-clock time: 24:00:00
-# Number of nodes: 1
-# Number of cores per nodes: 64
+srun -p dc-cpu -A slfse --time=1:00:0 -N 1 -c 64 --tasks-per-node=1 --pty bash -i
 ```
+**Usage:**
+`-p` is the queue name which is `dc-cpu` for `JURECA` and `photon` for `hpc-batch`
+`-A` is the account name which is `slfse` for `JURECA` and `boulis1` for `hpc-batch`
+`--time` is wall-clock time. The less it is the faster the allocation. In the above command, we specify it to be 1 hour `1:00:00`
+`-N` is the Number of nodes allocated which is 1 in the above commands
+`-c` is the Number of cores per node which is `64` for JURECA and `32` for `hpc-batch`
+
 
 **Note:** Replace `jboulis` and `boulis1` in the following commands with your username for lxplus, hpc-batch, juelich
 
