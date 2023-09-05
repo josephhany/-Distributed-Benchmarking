@@ -183,8 +183,29 @@ To find project name in JURECA, either get it from JuDoor portal or execute this
 find /p/project/ -maxdepth 1 -type d -exec test -r {} \; -print | awk -F/ '!/\/\./ && !/\/(test|ddn-ime|project$)/ {print $NF}'
 ```
 
+# Uploading your SSH key to Julich
+
+
+
 # Getting Data into Julich
 
+Since Julich does not allow users to use `xrdcp` to copy data files locally from `root://eospublic.cern.ch//eos/opendata/`, you have to use `scp` utility to copy `.root` files from storage connected to CERN network. However, you need to make sure to have the same private key that you were using inside of lxplus (note: normal user's lxplus storage was not sufficient to hold data).
+
+One solution is to download the data on hpc-batch (photon partition) and use `scp` to send it to JURECA.
+
+First, we need to have the same private key located on hpc-batch.
+
+Second, we need to make the private key readable and writable only by its owner while denying any access to group members and others.
+
+```
+/hpcscratch/user/jboulis/data/id_ed25519
+```
+
+Then, we can use `scp` normally to copy the data from hpc-batch to JURECA
+
+```
+scp -i /hpcscratch/user/jboulis/data/id_ed25519 /hpcscratch/user/jboulis/data/Run2012BC_DoubleMuParked_Muons.root boulis1@jureca-ipv4.fz-juelich.de:/p/project/cslfse/boulis1/data/
+```
 
 # Running Benchmarks
 
