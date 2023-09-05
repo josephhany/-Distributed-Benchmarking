@@ -198,7 +198,7 @@ First, we need to have the same private key located on hpc-batch.
 Second, we need to make the private key readable and writable only by its owner while denying any access to group members and others.
 
 ```
-/hpcscratch/user/jboulis/data/id_ed25519
+chmod 600 /hpcscratch/user/jboulis/data/id_ed25519
 ```
 
 Then, we can use `scp` normally to copy the data from hpc-batch to JURECA
