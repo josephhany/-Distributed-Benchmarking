@@ -147,6 +147,14 @@ cd prometheus/
 ./prometheus --config.file=prometheus.yml
 ```
 
+**To run prometheus:**
+
+```
+screen -dmS prometheus /bin/bash -c "cd /p/project/cslfse/boulis1/prometheus && ./prometheus --web.enable-lifecycle --config.file=prometheus.yml"
+```
+
+Replace `/p/project/cslfse/boulis1/prometheus` with your prometheus installation directory path.
+
 **To install Node Exporter**
 (link)[https://prometheus.io/docs/guides/node-exporter/]
 
