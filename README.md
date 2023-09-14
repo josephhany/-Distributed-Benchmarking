@@ -224,6 +224,21 @@ EXEC_SCRIPT_PATH = '/p/project/cslfse/boulis1/exec_df102.sh'
 ACOUNT_NAME = 'slfse'
 ```
 
+# Port Forwarding
+
+```
+ssh -XY -L 9090:localhost:9090 jboulis@lxplus763.cern.ch
+```
+
+```
+ssh -XY -i ~/.ssh/id_ed25519 -L 9090:localhost:9090 boulis1@jureca-ipv4.fz-juelich.de
+```
+
+```
+ssh -XY -L 9090:localhost:9090 jboulis@hpc-batch.cern.ch
+```
+
+
 # PromQL queries to query Prometheus time-series database
 
 This query calculates the per-second rate of change (instantaneous rate) in the "node_network_receive_bytes_total" metric over a 30-second window
