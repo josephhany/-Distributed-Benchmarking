@@ -238,5 +238,6 @@ rate(process_cpu_seconds_total[30s]) * 100
 
 # Download Previous Benchmarking Data on Jülich
 
-[link](https://drive.google.com/drive/folders/1NcQWjTXtePesSGvc4elSM0Me5kb4lK6n?usp=sharing)
+In order to access previous benchmarks results that we have run on Jülich, you have to have prometheus already installed and replace 'data/' directory in prometheus installation directory with the data directory found in this [link](https://drive.google.com/drive/folders/1NcQWjTXtePesSGvc4elSM0Me5kb4lK6n?usp=sharing).
 
+Now, you can access all the data experiments data from the time series databse of prometheus found in the data directory. Below you will find a list of the experiment setup, start time, end time, and other relevant data.
