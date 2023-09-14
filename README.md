@@ -224,6 +224,11 @@ EXEC_SCRIPT_PATH = '/p/project/cslfse/boulis1/exec_df102.sh'
 ACOUNT_NAME = 'slfse'
 ```
 
+Killing all processes using port 9090 (i.e., Killing running instances of Prometheus in the background, assuming prometheus port is 9090)
+```
+lsof -i :9090 | awk 'NR!=1 {print $2}' | xargs -r kill -9
+```
+
 # Port Forwarding
 
 ```
