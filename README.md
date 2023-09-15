@@ -156,10 +156,11 @@ screen -dmS prometheus /bin/bash -c "cd /p/project/cslfse/boulis1/prometheus && 
 Replace `/p/project/cslfse/boulis1/prometheus` with your prometheus installation directory path.
 
 **To install Node Exporter**
-(link)[https://prometheus.io/docs/guides/node-exporter/]
+[link](https://prometheus.io/docs/guides/node-exporter/)
 
 **To install Slurm Exporter**
-(link)[]
+
+Follow this [link](https://github.com/vpenso/prometheus-slurm-exporter/blob/master/DEVELOPMENT.md) to install Slurm Exporter.
 
 # Modifying environment variables
 
@@ -353,7 +354,6 @@ Running Benchmark df102_NanoAODDimuonAnalysis on HPC-Batch with cores from 64 to
 Start Time,End Time,Total Time
 2023-08-22 02:55:34,2023-08-22 03:38:10,00:42:18
 ```
-
 
 
 HPC-batch data [link](https://drive.google.com/drive/folders/1XNj8aN8niSb4Wswj9_Qbd9oG7-x6HaQL?usp=sharing)
