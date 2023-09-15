@@ -247,7 +247,7 @@ Killing all processes using port 9090 (i.e., Killing running instances of Promet
 lsof -i :9090 | awk 'NR!=1 {print $2}' | xargs -r kill -9
 ```
 
-# Port Forwarding
+# Using Port Forwarding to see enpoints on our local machine
 
 ```
 ssh -XY -L 9090:localhost:9090 jboulis@lxplus763.cern.ch
@@ -261,6 +261,7 @@ ssh -XY -i ~/.ssh/id_ed25519 -L 9090:localhost:9090 boulis1@jureca-ipv4.fz-jueli
 ssh -XY -L 9090:localhost:9090 jboulis@hpc-batch.cern.ch
 ```
 
+**Note**: without `-XY` option, you will not be able to see the webpages.
 
 # PromQL queries to query Prometheus time-series database
 
