@@ -299,3 +299,8 @@ Running Benchmark [df102_NanoAODDimuonAnalysis](https://root.cern/doc/master/df1
 | 2048       | 167.77 (cold start) |
 | 2048       | 154.20 |
 | 2048       | 153.89 |
+
+To query prometheus timeseries databse for this time interval and get simillar graphs like the one below:  
+![Screenshot from 2023-09-14 20-34-12](https://github.com/josephhany/Distributed-Benchmarking/assets/54475725/1276012b-82fb-442c-841e-12120b0616a1)
+
+You have to set 
