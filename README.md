@@ -300,7 +300,13 @@ Running Benchmark [df102_NanoAODDimuonAnalysis](https://root.cern/doc/master/df1
 | 2048       | 154.20 |
 | 2048       | 153.89 |
 
-To query prometheus timeseries databse for this time interval and get simillar graphs like the one below:  
+To query prometheus timeseries databse for this time interval and get simillar graphs like the one below:
+
 ![Screenshot from 2023-09-14 20-34-12](https://github.com/josephhany/Distributed-Benchmarking/assets/54475725/1276012b-82fb-442c-841e-12120b0616a1)
 
 You have to set 
+
+![Screenshot from 2023-09-14 20-37-41](https://github.com/josephhany/Distributed-Benchmarking/assets/54475725/6ea2c00e-06b1-4423-b655-0aa99808fbea)
+
+
+![Screenshot from 2023-09-14 20-39-01](https://github.com/josephhany/Distributed-Benchmarking/assets/54475725/99504ca8-969c-42c7-9d77-b78fbf464d6d)
