@@ -274,10 +274,11 @@ Now, you can access all the data experiments data from the time series databse o
 Running Benchmark [df102_NanoAODDimuonAnalysis](https://root.cern/doc/master/df102__NanoAODDimuonAnalysis_8py.html) on [JURECA](https://www.fz-juelich.de/en/ias/jsc/systems/supercomputers/jureca) with cores ranging from 128 to 2048 and with data ranging from 1000 MB to 16000 MB (cold starts were dropped while plotting the above graph)
 
 **Experiment timing:**
-```
-Start Time           End Time              Total Time
-2023-08-21 18:48:52  2023-08-21 19:53:14   1h4m22s
-```
+
+| Start Time          | End Time            | Total Time |
+|---------------------|---------------------|------------|
+| 2023-08-21 18:48:52 | 2023-08-21 19:53:14 | 1h4m22s    |
+
 
 **Experiment results:**
 
