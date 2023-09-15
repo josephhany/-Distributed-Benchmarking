@@ -215,6 +215,16 @@ Then, we can use `scp` normally to copy the data from hpc-batch to JURECA
 scp -i /hpcscratch/user/jboulis/data/id_ed25519 /hpcscratch/user/jboulis/data/Run2012BC_DoubleMuParked_Muons.root boulis1@jureca-ipv4.fz-juelich.de:/p/project/cslfse/boulis1/data/
 ```
 
+# Getting Data from Julich
+
+After geeting `id_ed25519` private key and executing `chmod 600` on it, execute the following command on your local machine to get data from JURECA.
+
+**Note**: To include the jump host (intermediate host) directly in the scp command, we use the `-o` option to specify a `ProxyJump` configuration. This allows you to use the scp command as if you were copying files directly from your local machine to the remote host, with the intermediate host acting as a jump host in the middle.
+
+```
+scp -i ~/Downloads/id_ed25519 -o ProxyJump=jboulis@lxplus.cern.ch boulis1@jureca-ipv4.fz-juelich.de:/p/home/jusers/boulis1/shared/rootproject/Distributed-Benchmarking/Jülich-jureca/Benchmarking-Data/data.tar.gz /home/jboulis/Downloads
+```
+
 # Running Benchmarks
 
 Now, after you have installed ROOT, prometheus, node exporter, dask, and slurm exporter. You can run any benchmark by submitting it as job from any login node.
