@@ -275,7 +275,7 @@ This query calculates the rate of change of the process_cpu_seconds_total metric
 rate(process_cpu_seconds_total[30s]) * 100
 ```
 
-# Download Previous Benchmarking Data on Jülich
+# Previous Benchmarking Data on Jülich
 
 In order to access previous benchmarks results that we have run on Jülich, you have to have prometheus already installed and replace 'data/' directory in prometheus installation directory with the data directory found in this [link](https://drive.google.com/drive/folders/1NcQWjTXtePesSGvc4elSM0Me5kb4lK6n?usp=sharing).
 
@@ -321,3 +321,23 @@ You have to set
 
 
 ![Screenshot from 2023-09-14 20-39-01](https://github.com/josephhany/Distributed-Benchmarking/assets/54475725/99504ca8-969c-42c7-9d77-b78fbf464d6d)
+
+
+# Previous Benchmarking Data on CERN cluster (hpc-batch)
+
+```
+Running Benchmark df102_NanoAODDimuonAnalysis on HPC-Batch with cores from 64 to 128 with data from 1000 MB to 2000 MB (without Async Prefetching)
+64,782.4957950115204
+128,565.8549840450287
+Start Time,End Time,Total Time
+2023-08-22 01:37:24,2023-08-22 02:19:29,00:42:05
+```
+
+```
+Running Benchmark df102_NanoAODDimuonAnalysis on HPC-Batch with cores from 64 to 128 with data from 1000 MB to 2000 MB (with Async Prefetching)
+64,511.76918387413025
+128,521.8195469379425
+Start Time,End Time,Total Time
+2023-08-22 02:55:34,2023-08-22 03:38:10,00:42:18
+```
+
