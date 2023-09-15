@@ -269,3 +269,32 @@ rate(process_cpu_seconds_total[30s]) * 100
 In order to access previous benchmarks results that we have run on Jülich, you have to have prometheus already installed and replace 'data/' directory in prometheus installation directory with the data directory found in this [link](https://drive.google.com/drive/folders/1NcQWjTXtePesSGvc4elSM0Me5kb4lK6n?usp=sharing).
 
 Now, you can access all the data experiments data from the time series databse of prometheus found in the data directory. Below you will find a list of the experiment setup, start time, end time, and other relevant data.
+
+**Experiment details:**
+Running Benchmark [df102_NanoAODDimuonAnalysis](https://root.cern/doc/master/df102__NanoAODDimuonAnalysis_8py.html) on [JURECA](https://www.fz-juelich.de/en/ias/jsc/systems/supercomputers/jureca) with cores ranging from 128 to 2048 and with data ranging from 1000 MB to 16000 MB (cold starts were dropped while plotting the above graph)
+
+**Experiment timing:**
+```
+Start Time           End Time              Total Time
+2023-08-21 18:48:52  2023-08-21 19:53:14   1h4m22s
+```
+
+**Experiment results:**
+
+| core count | runtime (sec) |
+|------------|---------------|
+| 128        | 151.44 (cold start) |
+| 128        | 142.46 |
+| 128        | 152.20 |
+| 256        | 168.50 (cold start) |
+| 256        | 151.13 |
+| 256        | 151.67 |
+| 512        | 162.07 (cold start) |
+| 512        | 151.41 |
+| 512        | 152.19 |
+| 1024       | 163.71 (cold start) |
+| 1024       | 152.94 |
+| 1024       | 152.40 |
+| 2048       | 167.77 (cold start) |
+| 2048       | 154.20 |
+| 2048       | 153.89 |
