@@ -275,6 +275,12 @@ This query calculates the rate of change of the process_cpu_seconds_total metric
 rate(process_cpu_seconds_total[30s]) * 100
 ```
 
+# Run Benchmarks
+
+After running the benchmark successfully, you will get a file ++++ that has the data in this format: +++.
+
+Copy this data and paste it in the Data variable in this Notebook: [link](https://colab.research.google.com/drive/1aWk-P3iDjdeKQMTO-IGzFMakZB9o75a2?usp=sharing)
+
 # Previous Benchmarking Data on Jülich
 
 In order to access previous benchmarks results that we have run on Jülich, you have to have prometheus already installed and replace 'data/' directory in prometheus installation directory with the data directory found in this [link](https://drive.google.com/drive/folders/1NcQWjTXtePesSGvc4elSM0Me5kb4lK6n?usp=sharing).
